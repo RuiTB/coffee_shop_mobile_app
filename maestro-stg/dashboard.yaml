@@ -1,0 +1,6 @@
+appId: com.example.templates.stg
+---
+- swipe:
+    direction: "UP"
+- swipe:
+    direction: "UP"

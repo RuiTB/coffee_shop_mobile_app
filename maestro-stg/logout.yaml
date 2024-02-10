@@ -1,0 +1,5 @@
+appId: com.example.templates.stg
+---
+- tapOn: "Menu"
+- tapOn: "Logout"
+- tapOn: "Yes"
