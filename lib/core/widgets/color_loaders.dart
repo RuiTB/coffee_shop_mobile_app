@@ -2,7 +2,6 @@ import 'dart:math';
 
 import "package:flutter/material.dart";
 import 'package:flutter_clean_architecture_template/core/resources/palette.dart';
-import 'package:flutter_clean_architecture_template/core/resources/styles.dart';
 
 class ColorLoader extends StatefulWidget {
   final double radius;
@@ -98,7 +97,7 @@ class _ColorLoaderState extends State<ColorLoader>
                   ),
                   child: Dot(
                     radius: dotRadius,
-                    color: Palette.primary,
+                    color: Palette.coffeeBrown,
                   ),
                 ),
                 Transform.translate(
@@ -108,7 +107,7 @@ class _ColorLoaderState extends State<ColorLoader>
                   ),
                   child: Dot(
                     radius: dotRadius,
-                    color: Palette.primaryLight,
+                    color: Palette.coffeeBrown,
                   ),
                 ),
                 Transform.translate(
@@ -118,7 +117,7 @@ class _ColorLoaderState extends State<ColorLoader>
                   ),
                   child: Dot(
                     radius: dotRadius,
-                    color: Theme.of(context).extension<AppColors>()!.red,
+                    color: Palette.coffeeBrown,
                   ),
                 ),
                 Transform.translate(
@@ -128,7 +127,7 @@ class _ColorLoaderState extends State<ColorLoader>
                   ),
                   child: Dot(
                     radius: dotRadius,
-                    color: Theme.of(context).extension<AppColors>()!.yellow,
+                    color: Palette.coffeeBrown,
                   ),
                 ),
                 Transform.translate(
@@ -138,7 +137,7 @@ class _ColorLoaderState extends State<ColorLoader>
                   ),
                   child: Dot(
                     radius: dotRadius,
-                    color: Theme.of(context).extension<AppColors>()!.green,
+                    color: Palette.coffeeBrown,
                   ),
                 ),
                 Transform.translate(
@@ -148,7 +147,7 @@ class _ColorLoaderState extends State<ColorLoader>
                   ),
                   child: Dot(
                     radius: dotRadius,
-                    color: Theme.of(context).extension<AppColors>()!.flamingo,
+                    color: Palette.coffeeBrown,
                   ),
                 ),
                 Transform.translate(
@@ -158,7 +157,7 @@ class _ColorLoaderState extends State<ColorLoader>
                   ),
                   child: Dot(
                     radius: dotRadius,
-                    color: Theme.of(context).extension<AppColors>()!.lavender,
+                    color: Palette.coffeeBrown,
                   ),
                 ),
                 Transform.translate(
@@ -168,7 +167,7 @@ class _ColorLoaderState extends State<ColorLoader>
                   ),
                   child: Dot(
                     radius: dotRadius,
-                    color: Theme.of(context).extension<AppColors>()!.pink,
+                    color: Palette.coffeeBrown,
                   ),
                 ),
               ],

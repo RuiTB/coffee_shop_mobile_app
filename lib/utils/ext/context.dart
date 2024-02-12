@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture_template/core/resources/dimens.dart';
-import 'package:flutter_clean_architecture_template/core/resources/styles.dart';
+import 'package:flutter_clean_architecture_template/core/resources/palette.dart';
 import 'package:flutter_clean_architecture_template/core/widgets/loading.dart';
 
 extension ContextExtensions on BuildContext {
@@ -54,7 +54,7 @@ extension ContextExtensions on BuildContext {
               child: Center(
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Theme.of(this).extension<AppColors>()!.background,
+                    color: Palette.whiteSmoke,
                     borderRadius: BorderRadius.circular(Dimens.cornerRadius),
                   ),
                   margin: EdgeInsets.symmetric(horizontal: Dimens.space30),

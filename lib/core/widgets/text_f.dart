@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_clean_architecture_template/core/resources/dimens.dart';
 import 'package:flutter_clean_architecture_template/core/resources/palette.dart';
-import 'package:flutter_clean_architecture_template/core/resources/styles.dart';
 
 ///*********************************************
 /// Created by ukieTux on 22/04/2020 with ♥
@@ -81,8 +80,7 @@ class _TextFState extends State<TextF> {
             child: Text(
               widget.hint ?? "",
               style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                    color:
-                        Theme.of(context).extension<AppColors>()!.background,
+                    color: Palette.whiteSmoke,
                     height: 0.1,
                   ),
             ),
@@ -107,7 +105,7 @@ class _TextFState extends State<TextF> {
                 inputFormatters: widget.inputFormatter,
                 textAlignVertical: TextAlignVertical.center,
                 style: Theme.of(context).textTheme.bodyMedium,
-                cursorColor: Palette.text,
+                cursorColor: Palette.gunmetalGray,
                 decoration: InputDecoration(
                   prefixText: widget.prefixText,
                   alignLabelWithHint: true,
@@ -132,8 +130,8 @@ class _TextFState extends State<TextF> {
                   enabledBorder: OutlineInputBorder(
                     gapPadding: 0,
                     borderRadius: BorderRadius.circular(Dimens.space4),
-                    borderSide: BorderSide(
-                      color: Theme.of(context).extension<AppColors>()!.card!,
+                    borderSide: const BorderSide(
+                      color: Palette.pearlgray,
                     ),
                   ),
                   disabledBorder: OutlineInputBorder(
@@ -142,27 +140,27 @@ class _TextFState extends State<TextF> {
                     borderSide: BorderSide(color: Theme.of(context).cardColor),
                   ),
                   errorStyle: Theme.of(context).textTheme.labelSmall?.copyWith(
-                        color: Theme.of(context).extension<AppColors>()!.red,
+                        color: Palette.red,
                       ),
                   focusedErrorBorder: OutlineInputBorder(
                     gapPadding: 0,
                     borderRadius: BorderRadius.circular(Dimens.space4),
-                    borderSide: BorderSide(
-                      color: Theme.of(context).extension<AppColors>()!.red!,
+                    borderSide: const BorderSide(
+                      color: Palette.red,
                     ),
                   ),
                   errorBorder: OutlineInputBorder(
                     gapPadding: 0,
                     borderRadius: BorderRadius.circular(Dimens.space4),
-                    borderSide: BorderSide(
-                      color: Theme.of(context).extension<AppColors>()!.red!,
+                    borderSide: const BorderSide(
+                      color: Palette.red,
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     gapPadding: 0,
                     borderRadius: BorderRadius.circular(Dimens.space4),
-                    borderSide: BorderSide(
-                      color: Theme.of(context).extension<AppColors>()!.pink!,
+                    borderSide: const BorderSide(
+                      color: Palette.coffeeBrown,
                     ),
                   ),
                 ),

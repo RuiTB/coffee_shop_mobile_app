@@ -2,19 +2,14 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_clean_architecture_template/core/app_route.dart';
 import 'package:flutter_clean_architecture_template/core/resources/dimens.dart';
 import 'package:flutter_clean_architecture_template/core/resources/images.dart';
-import 'package:flutter_clean_architecture_template/core/widgets/button.dart';
-import 'package:flutter_clean_architecture_template/core/widgets/button_text.dart';
 import 'package:flutter_clean_architecture_template/core/widgets/parent.dart';
 import 'package:flutter_clean_architecture_template/core/widgets/spacer_v.dart';
 import 'package:flutter_clean_architecture_template/core/widgets/text_f.dart';
-import 'package:flutter_clean_architecture_template/features/auth/domain/usecases/post_login.dart';
 import 'package:flutter_clean_architecture_template/features/auth/pages/login/cubit/auth_cubit.dart';
 import 'package:flutter_clean_architecture_template/utils/ext/context.dart';
 import 'package:flutter_clean_architecture_template/utils/ext/string.dart';
-import 'package:go_router/go_router.dart';
 
 ///*********************************************
 ///  flutter_clean_architecture_template |
@@ -74,7 +69,7 @@ class LoginPage extends StatelessWidget {
                         backgroundColor: Theme.of(context).hintColor,
                         radius: Dimens.profilePicture + Dimens.space4,
                         child: CircleAvatar(
-                          backgroundImage: AssetImage(Images.icLauncher),
+                          backgroundImage: AssetImage(Images.icLogo),
                           radius: Dimens.profilePicture,
                         ),
                       ),
@@ -140,26 +135,26 @@ class LoginPage extends StatelessWidget {
                         },
                       ),
                       SpacerV(value: Dimens.space24),
-                      Button(
-                        title: tr('login'),
-                        onPressed: () {
-                          if (_keyForm.currentState?.validate() ?? false) {
-                            context.read<AuthCubit>().login(
-                                  LoginParams(
-                                    email: _conEmail.text,
-                                    password: _conPassword.text,
-                                  ),
-                                );
-                          }
-                        },
-                      ),
-                      ButtonText(
-                        title: tr('askRegister'),
-                        onPressed: () {
-                          /// Direct to register page
-                          context.pushNamed(Routes.register.name);
-                        },
-                      ),
+                      // Button(
+                      //   title: tr('login'),
+                      //   onPressed: () {
+                      //     if (_keyForm.currentState?.validate() ?? false) {
+                      //       context.read<AuthCubit>().login(
+                      //             LoginParams(
+                      //               email: _conEmail.text,
+                      //               password: _conPassword.text,
+                      //             ),
+                      //           );
+                      //     }
+                      //   },
+                      // ),
+                      // ButtonText(
+                      //   title: tr('askRegister'),
+                      //   onPressed: () {
+                      //     /// Direct to register page
+                      //     context.pushNamed(Routes.register.name);
+                      //   },
+                      // ),
                     ],
                   ),
                 ),

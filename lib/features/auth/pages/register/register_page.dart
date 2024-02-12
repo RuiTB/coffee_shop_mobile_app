@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clean_architecture_template/core/resources/dimens.dart';
 import 'package:flutter_clean_architecture_template/core/resources/images.dart';
-import 'package:flutter_clean_architecture_template/core/widgets/button.dart';
 import 'package:flutter_clean_architecture_template/core/widgets/my_appbar.dart';
 import 'package:flutter_clean_architecture_template/core/widgets/parent.dart';
 import 'package:flutter_clean_architecture_template/core/widgets/spacer_v.dart';
 import 'package:flutter_clean_architecture_template/core/widgets/text_f.dart';
-import 'package:flutter_clean_architecture_template/features/auth/domain/usecases/post_register.dart';
 import 'package:flutter_clean_architecture_template/features/auth/pages/register/cubit/register_cubit.dart';
 import 'package:flutter_clean_architecture_template/utils/ext/context.dart';
 import 'package:flutter_clean_architecture_template/utils/ext/string.dart';
@@ -74,7 +72,7 @@ class RegisterPage extends StatelessWidget {
                       backgroundColor: Theme.of(context).hintColor,
                       radius: Dimens.profilePicture + Dimens.space4,
                       child: CircleAvatar(
-                        backgroundImage: AssetImage(Images.icLauncher),
+                        backgroundImage: AssetImage(Images.icLogo),
                         radius: Dimens.profilePicture,
                       ),
                     ),
@@ -192,21 +190,21 @@ class RegisterPage extends StatelessWidget {
                       },
                     ),
                     SpacerV(value: Dimens.space24),
-                    Button(
-                      key: const Key("btn_register"),
-                      title: tr('register'),
-                      onPressed: () {
-                        /// Validate form first
-                        if (_keyForm.currentState?.validate() ?? false) {
-                          context.read<RegisterCubit>().register(
-                                RegisterParams(
-                                  email: _conEmail.text,
-                                  password: _conPassword.text,
-                                ),
-                              );
-                        }
-                      },
-                    ),
+                    // Button(
+                    //   key: const Key("btn_register"),
+                    //   title: tr('register'),
+                    //   onPressed: () {
+                    //     /// Validate form first
+                    //     if (_keyForm.currentState?.validate() ?? false) {
+                    //       context.read<RegisterCubit>().register(
+                    //             RegisterParams(
+                    //               email: _conEmail.text,
+                    //               password: _conPassword.text,
+                    //             ),
+                    //           );
+                    //     }
+                    //   },
+                    // ),
                   ],
                 ),
               ),

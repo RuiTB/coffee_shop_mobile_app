@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture_template/core/resources/styles.dart';
+import 'package:flutter_clean_architecture_template/core/resources/palette.dart';
 import 'package:flutter_clean_architecture_template/core/widgets/toast.dart';
 import 'package:flutter_clean_architecture_template/utils/helper/common.dart';
 import 'package:flutter_clean_architecture_template/utils/services/firebase/firebase_crashlogger.dart';
@@ -21,7 +21,7 @@ extension StringExtension on String {
 
       showToastWidget(
         Toast(
-          bgColor: Theme.of(context).extension<AppColors>()!.red,
+          bgColor: Palette.red,
           icon: Icons.error,
           message: message,
           textColor: Colors.white,
@@ -46,7 +46,7 @@ extension StringExtension on String {
       // showToast(msg)
       showToastWidget(
         Toast(
-          bgColor: Theme.of(context).extension<AppColors>()!.green,
+          bgColor: Palette.green,
           icon: Icons.check_circle,
           message: message,
           textColor: Colors.white,
@@ -69,7 +69,6 @@ extension StringExtension on String {
 
       showToastWidget(
         Toast(
-          bgColor: Theme.of(context).extension<AppColors>()!.pink,
           icon: Icons.info,
           message: message,
           textColor: Colors.white,

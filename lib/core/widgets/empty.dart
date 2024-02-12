@@ -20,7 +20,7 @@ class Empty extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
-          Images.icLauncher,
+          Images.icLogo,
           width: context.widthInPercent(45),
         ),
         Text(

@@ -4,10 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clean_architecture_template/dependencies_injection.dart';
 import 'package:flutter_clean_architecture_template/features/auth/pages/login/cubit/auth_cubit.dart';
 import 'package:flutter_clean_architecture_template/features/auth/pages/login/login_page.dart';
+import 'package:flutter_clean_architecture_template/features/auth/pages/onboarding/onboarding_page.dart';
 import 'package:flutter_clean_architecture_template/features/auth/pages/register/cubit/register_cubit.dart';
 import 'package:flutter_clean_architecture_template/features/auth/pages/register/register_page.dart';
-import 'package:flutter_clean_architecture_template/features/auth/pages/wid.dart';
-import 'package:flutter_clean_architecture_template/main.dart';
 import 'package:flutter_clean_architecture_template/utils/helper/go_router_refresh_stream.dart';
 import 'package:flutter_clean_architecture_template/utils/services/hive/main_box.dart';
 import 'package:go_router/go_router.dart';
@@ -18,6 +17,7 @@ enum Routes {
   // Auth Page
   login("/auth/login"),
   register("/auth/register"),
+  onboarding("/auth/onboarding"),
   ;
 
   const Routes(this.path);
@@ -37,7 +37,7 @@ class AppRoute {
       GoRoute(
         path: Routes.root.path,
         name: Routes.root.name,
-        builder: (_, __) => const MyWidget(),
+        builder: (_, __) => const OnboardingPage(),
       ),
       GoRoute(
         path: Routes.login.path,
@@ -66,6 +66,11 @@ class AppRoute {
       ///  but if not we must direct user to login page
       if (!((MainBoxMixin.mainBox?.get(MainBoxKeys.isLogin.name) as bool?) ??
           false)) {
+        if ((MainBoxMixin.mainBox?.get(MainBoxKeys.isFirstOpen.name)
+                as bool?) ??
+            true) {
+          return Routes.onboarding.path;
+        }
         return isLoginPage ? null : Routes.login.path;
       }
 
